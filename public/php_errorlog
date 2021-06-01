@@ -1,0 +1,6 @@
+[24-Mar-2020 06:35:41 UTC] PHP Fatal error:  Cannot use Illuminate\Contracts\Auth\Authenticatable as Authenticatable because the name is already in use in /home/brainupc/public_html/myscholarship/app/Model/Partner.php on line 9
+[08-Apr-2020 15:06:35 UTC] PHP Fatal error:  Cannot use Auth as Auth because the name is already in use in /home/brainupc/public_html/myscholarship/app/Http/Controllers/PartnerController.php on line 9
+[06-May-2020 10:08:21 UTC] PHP Fatal error:  Cannot redeclare App\Http\Controllers\UserController::scholarshipDetails() in /home/brainupc/public_html/myscholarship/app/Http/Controllers/UserController.php on line 84
+[06-May-2020 10:08:21 UTC] PHP Fatal error:  Cannot redeclare App\Http\Controllers\UserController::scholarshipDetails() in /home/brainupc/public_html/myscholarship/app/Http/Controllers/UserController.php on line 84
+[06-May-2020 10:08:27 UTC] PHP Fatal error:  Cannot redeclare App\Http\Controllers\UserController::scholarshipDetails() in /home/brainupc/public_html/myscholarship/app/Http/Controllers/UserController.php on line 84
+[06-May-2020 10:09:21 UTC] PHP Fatal error:  Cannot redeclare App\Http\Controllers\UserController::scholarshipDetails() in /home/brainupc/public_html/myscholarship/app/Http/Controllers/UserController.php on line 84
