@@ -22,7 +22,7 @@ class User extends Authenticatable implements MustVerifyEmail, CanResetPassword
      * @var array
      */
     protected $fillable = [
-        'first_name', 'last_name', 'email', 'email_verified_at', 'password', 'mobile_number', 'transaction_id', 'expiry_date', 'access_token', 'remember_token','random_token', 'street', 'city', 'is_active', 'postcode', 'state', 'interests', 'school'
+        'first_name', 'last_name', 'email', 'email_verified_at', 'password', 'mobile_number','is_active', 'transaction_id', 'expiry_date', 'access_token', 'remember_token','random_token', 'street', 'city', 'is_active','is_shopify_user', 'postcode', 'state', 'interests', 'school'
     ];
 
     /**

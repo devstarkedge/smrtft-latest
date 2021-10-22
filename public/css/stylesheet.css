@@ -96,7 +96,7 @@ section.banner h1 {
     height: 100%;
     left: 0;
     width: 100%;
-    background-image: linear-gradient(to left, #6e59c0 0%, #8f58d8 100%);
+    background-image: linear-gradient(to left, #000000 0%, #000000 100%);
     z-index: -1;
     opacity: .8;
 }
@@ -291,7 +291,7 @@ section.recent-scholars {
     border-radius: 10px;
     text-align: center;
 }
-.recent-inner-outer::before {
+/*.recent-inner-outer::before {
     content: "";
     width: 290px;
     bottom: -35px;
@@ -301,7 +301,7 @@ section.recent-scholars {
     background-size: 100%;
     position: absolute;
     z-index: -1;
-}
+}*/
 h2{
 color: #555555;
 font-family: 'PT Serif', serif;
@@ -577,14 +577,14 @@ li.footer-list.first-large {
     width: 41%;
 }
 li.footer-list h5 {
-    color: #3f339f;
+    color: #000000;
     font-family: 'Roboto', sans-serif;
     font-size: 17px;
     font-weight: 600;
     margin-bottom: 25px;
 }
 ul.footer-list-item li a {
-    color: #3f339f;
+    color: #000000;
     font-family: 'Roboto', sans-serif;
     font-size: 16px;
     font-weight: 300;
@@ -619,7 +619,7 @@ ul.footer-list-item li.social-links a:not(:last-child){
 margin-right: 5px;
 }
 ul.footer-list-item li.social-links a:hover{
-    background:#3b379f ;
+    background:#000000 ;
     color: #FFF;
 
 }
@@ -636,7 +636,7 @@ section.copyright p{
 	line-height: 26px;
 }
 section.copyright p a {
-    color: #3f339f;
+    color: #000000;
 }
 .faqs::after {
     content: "";
@@ -899,10 +899,12 @@ form.list-sort-scholars select {
     content: "";
     position: absolute
 }
+/** to set footer and image **/
+
 .slant-last::after {
     content: "";
     position: absolute;
-    bottom: -120px;
+    bottom: -160px;
     left: 0;
     height: 320px;
     background: url(../images/slant-down-dark.svg) no-repeat;
@@ -910,6 +912,11 @@ form.list-sort-scholars select {
     z-index: -2;
     background-size: cover;
     background-position: bottom;
+}
+
+
+footer.footer-home {
+    margin-top: 0;
 }
 
 /** FAQ Page **/
@@ -999,10 +1006,10 @@ section.recent-scholars.sign-in {
 .form-img img{
     width: 100%;
     display: block;
-    opacity: .35;
+    /*opacity: .35;*/
 }
 .form-img {
-    background: #5538b3;
+    /*background: #000000;*/
     
 }
 .recent-inner.sign-in-box {
@@ -1059,14 +1066,14 @@ section.recent-scholars.sign-in {
     font-size: 18px;
     font-family: 'Roboto', sans-serif;
     color: #FFF;
-    background: #7159c2;
+    background: #000000;
     padding: 15px;
     margin: 7px 0 10px;
     cursor: pointer;
     transition: all .3s ease-in-out;
 }
 .sign-in-form button:hover {
-    background: #3b379f;
+    background: #333333;
 }
 ul.extra-links{
     display: flex;
@@ -1081,7 +1088,7 @@ ul.extra-links li a {
     transition: all .3s ease-in-out;
 }
 ul.extra-links li a:hover{
-    color:#7159c2;
+    color:#000000;
 }
 fieldset.has-info .show-info {
     position: absolute;
@@ -1452,10 +1459,10 @@ section.links-contact h2 {
     color: #454545;
     font-weight: 500;
 }
-section.sign-in .recent-inner-outer::before {
+/*section.sign-in .recent-inner-outer::before {
     bottom: -120px;
     left: -145px;
-}
+}*/
 ul.support-links {
     display: flex;
     justify-content: center;
@@ -2797,3 +2804,4 @@ span.delete-row {
 .row-append label {
     margin-bottom: 0;
 }
+

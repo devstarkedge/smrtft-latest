@@ -32,16 +32,9 @@
                                 <div class="row">
                                 <div class="form-group col-sm-12">
                                         <label for="name">Category </label>
-                                        <select class="form-control" name="category">
-                                        <option value="">--- select category ---</option>
-                                        @if(count($categoryDetails)>0)
-                                        @foreach($categoryDetails as $details)
-                                        <option value="{{$details->id}}">{{$details->category_name}}</option>
-
-                                        @endforeach
-
-                                        @endif
-                                        </select>       
+                                        <input type="hidden" name="category" value="{{$categoryDetails->id}}">
+                                        <input id="categoryname" type="text" class="form-control{{ $errors->has('categoryname') ? ' is-invalid' : '' }}" name="categoryname" value="{{$categoryDetails->category_name}}" required placeholder="Enter Category Name.." readonly>
+                                              
                                     </div>
                                     <div class="form-group col-sm-12">
                                         <label for="name">SubCategory Name</label>
@@ -54,6 +47,9 @@
                                      <div class="form-group col-sm-12">
                                         <label for="amount">SubCategory Image</label>
                                         <input  type="file" class="form-control" id="subcategoryimage"  name="subcategoryimage"/>
+                                          <div class="dimension-label">
+                                            <p>Uploaded Image should have 950 * 553 Dimensions</p>
+                                        </div>
                                     </div>
                                     
                                     <div class="form-group col-sm-12">

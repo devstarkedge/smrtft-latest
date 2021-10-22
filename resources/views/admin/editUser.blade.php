@@ -1,0 +1,79 @@
+@extends('admin.layouts.app')
+@section('content')
+<div class="page-inner">
+    <div class="page-title">
+       
+        <h3>Edit Trainer</h3>
+        
+    </div>
+    <div id="main-wrapper">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="panel panel-white">
+                    <div class="panel-body">
+                       
+                            <form method="POST" action="{{route('admin.user.update',$userDetails->id)}}"   enctype="multipart/form-data">
+                                
+                                @if(session()->has('message.level'))
+                                <div class="alert alert-{{ session('message.level') }}"> 
+                                    {!! session('message.content') !!}
+                                </div>
+                                @endif
+                                @if ($errors->any())
+                                <div class="alert alert-danger">
+                                    <ul>
+                                        @foreach ($errors->all() as $error)
+                                        <li>{{ $error }}</li>
+                                        @endforeach
+                                    </ul>
+                                </div>
+                                @endif
+                                @csrf
+                                <div class="row">
+                                    <div class="form-group col-sm-12">
+                                        <label for="name">User Name</label>
+                                        <input id="name" type="text" class="form-control{{ $errors->has('name') ? ' is-invalid' : '' }}" name="name" value="{{$userDetails->first_name}}" required placeholder="Enter  Name..">
+                                    </div>
+                                    <div class="form-group col-sm-12">
+                                        <label for="amount">Email</label>
+                                         <input id="email" type="email" class="form-control{{ $errors->has('email') ? ' is-invalid' : '' }}" name="email" value="{{$userDetails->email}}" required placeholder="Enter Email...">
+                                    </div>
+                                     <div class="form-group col-sm-12">
+                                        <div class="profile_image">
+                                        <label for="amount">Profile Image</label>
+                                        <img src="{{ asset('/user/'.$userDetails->profile_image)}}" alt="" title="" width="100px;" height="100px;" />
+                                        <input  type="file" class="form-control" id="profileimage"  name="profileimage"/>
+                                        </div>
+                                    </div>
+                                    <div class="form-group col-sm-12">
+                                        <div class="status_tr">
+                                        <div class="w-100 mt-3 mb-2">    
+                                        <label for="name">Status</label>
+                                        </div>
+                                        <div class="radio-main">
+                                        <div class="radio-outer radio-one">
+                                        <input type="radio" class="form-control" value="1" @if($userDetails->is_active==1) checked  @endif name="status">
+                                         <label for="name">Active</label>
+                                         </div>
+                                         <div class="radio-outer radio-two">
+                                         <input type="radio" class="form-control" value="0" @if($userDetails->is_active==0) checked  @endif name="status">
+                                         <label for="name">Deactive</label>
+                                         </div>
+                                         </div>
+                                         </div>
+                                    </div>
+                                  
+                                    <div class="form-group col-sm-12">
+                                       
+                                        <button type="submit" class="btn btn-primary">Save</button>
+                                       
+                                    </div>
+                                </div>
+                            </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    @endsection

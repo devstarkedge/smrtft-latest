@@ -4,6 +4,7 @@
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
 <meta charset="UTF-8">
 <meta name="description" content="Admin Dashboard Template" />
+ <meta name="csrf-token" content="{{ csrf_token() }}" />
 <meta name="keywords" content="admin,dashboard" />
 <meta name="author" content="Steelcoders" />
 <link rel = "icon" href ="#" type = "image/x-icon"> 
@@ -32,5 +33,10 @@
 <link href="{{ asset('assets/css/themes/green.css') }}" class="theme-color" rel="stylesheet" type="text/css"/>
 <link href="{{ asset('assets/css/custom.css') }}" rel="stylesheet" type="text/css"/>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
+
+<!-- js files -->
+
+<script src="{{ asset('assets/plugins/jquery/jquery-2.1.4.min.js') }}"></script>
+<script src="{{ asset('assets/plugins/jquery-ui/jquery-ui.min.js') }}"></script>
 
 

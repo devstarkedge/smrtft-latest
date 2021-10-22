@@ -14,7 +14,7 @@
 //Route::get('/', function () {
 //    return view('home');
 //})->name('home');
-Route::get('/', 'HomeController@index')->name('home');
+Route::get('/', 'Auth\LoginController@index')->name('home');
 //Auth Routes
 //Auth::routes(['verify' => true]);
 //Route::resource('register', 'Auth\RegisterController');
@@ -98,8 +98,57 @@ Route::group(['middleware' => ['auth', 'role:Administrator,SubAdmin'], 'prefix' 
     Route::get('subcategorylist', 'Admin\AdminController@subCategoryList')->name('admin.subcategory.list');
     Route::get('subcategory/create', 'Admin\AdminController@createSubCategory')->name('admin.subcategory.create');
     Route::post('subcategory/save', 'Admin\AdminController@saveSubCreateCategory')->name('admin.subcategory.save');
-    // old api
+    Route::get('trainerlist', 'Admin\AdminController@trainerList')->name('admin.trainer.list');
+    Route::get('trainer/create', 'Admin\AdminController@createTrainer')->name('admin.trainer.create');
+    Route::post('trainer/save', 'Admin\AdminController@saveTrainer')->name('admin.trainer.save');
+    Route::get('trainer/edit/{id}', 'Admin\AdminController@editTrainer')->name('admin.trainer.edit');
+    Route::post('trainer/update/{id}', 'Admin\AdminController@updateTrainer')->name('admin.trainer.update');
+    Route::get('trainer/delete/{id}', 'Admin\AdminController@deleteTrainer')->name('admin.trainer.delete');
+    Route::get('workoutlist', 'Admin\AdminController@workoutList')->name('admin.workout.list');
+    Route::get('workout/create', 'Admin\AdminController@createWorkout')->name('admin.workout.create');
+    Route::post('workout/save', 'Admin\AdminController@saveWorkout')->name('admin.workout.save');
+     Route::post('workoutindexupdate', 'Admin\AdminController@workoutIndexUpdate')->name('admin.workout.index.update');
+    Route::get('workout/edit/{id}', 'Admin\AdminController@editWorkout')->name('admin.workout.edit');
+    Route::post('workout/update/{id}', 'Admin\AdminController@updateWorkout')->name('admin.workout.update');
+    Route::get('programlist', 'Admin\AdminController@programList')->name('admin.program.list');
+    Route::get('program/create', 'Admin\AdminController@createProgram')->name('admin.program.create');
+    Route::post('program/save', 'Admin\AdminController@saveProgram')->name('admin.program.save');
+    Route::get('program/edit/{id}', 'Admin\AdminController@editProgram')->name('admin.program.edit');
+    Route::post('program/update/{id}', 'Admin\AdminController@updateProgram')->name('admin.program.update');
+    Route::get('user/create', 'Admin\AdminController@createUser')->name('admin.user.create');
+    Route::post('user/save', 'Admin\AdminController@saveUser')->name('admin.user.save');
+    
+    Route::get('userlist', 'Admin\AdminController@userList')->name('admin.user.list');
+    Route::get('user/edit/{id}', 'Admin\AdminController@editUser')->name('admin.user.edit');
+    Route::post('user/update/{id}','Admin\AdminController@updateUser')->name('admin.user.update');
+
     Route::get('profile', 'Admin\AdminController@showProfile')->name('admin.profile.show');
+    Route::post('profileupdate', 'Admin\AdminController@profileUpdate')->name('admin.profile.update');
+    Route::get('trainerworkoutlist','Admin\AdminController@trainerWorkoutList')->name('admin.trainerworkout.list');
+    Route::get('trainer/workoutlist/{id}', 'Admin\AdminController@trainerWorkouts')->name('admin.trainer.workout.list');
+    Route::get('trainerprogramlist','Admin\AdminController@trainerProgramList')->name('admin.trainerprogram.list');
+    Route::get('trainer/programlist/{id}', 'Admin\AdminController@trainerPrograms')->name('admin.trainer.program.list');
+    Route::get('trainer/programdetails/{id}', 'Admin\AdminController@trainerProgramDetails')->name('admin.trainer.program.details');
+    Route::get('trainer/addprogramdetails/{id}', 'Admin\AdminController@addProgramDetails')->name('admin.trainer.addprogram.details');
+    Route::post('trainer/saveprogramdetails/{id}', 'Admin\AdminController@saveProgramDetails')->name('admin.trainer.saveprogram.details');
+     Route::get('trainer/editprogramdetails/{id}', 'Admin\AdminController@editProgramdetails')->name('admin.trainer.edit.details');
+    Route::post('trainer/updateProgramDetails/{id}','Admin\AdminController@updateProgramDetails')->name('admin.trainer.updateprogram.details');
+    Route::get('nutritionlist', 'Admin\AdminController@nutritionList')->name('admin.nutrition.list');
+    Route::get('nutrition/create', 'Admin\AdminController@createNutrition')->name('admin.nutrition.create');
+    Route::post('nutrition/save', 'Admin\AdminController@saveNutrition')->name('admin.nutrition.save');
+    Route::get('nutrition/edit/{id}', 'Admin\AdminController@editNutrition')->name('admin.nutrition.edit');
+    Route::post('nutrition/update/{id}','Admin\AdminController@updateNutrition')->name('admin.nutrition.update');
+    Route::get('signup-user-list', 'Admin\AdminController@signupUserList')->name('admin.signup.user.list');
+    Route::get('approve_user/{id}', 'Admin\AdminController@approveUser')->name('admin.user.approve');
+    Route::get('reject_user/{id}', 'Admin\AdminController@rejectUser')->name('admin.user.reject');
+     Route::get('workout/exercises/{id}', 'Admin\AdminController@workoutExercises')->name('admin.workout.exercises');
+    Route::get('workout/addexercises/{id}', 'Admin\AdminController@addExercises')->name('admin.workout.addexerxcises');
+    Route::post('workout/saveExercises/{id}', 'Admin\AdminController@saveExercises')->name('admin.workout.saveexercises');
+     Route::get('workout/editexercises/{id}', 'Admin\AdminController@editExercises')->name('admin.workout.edit.exercises');
+    Route::post('workout/updateexercises/{id}','Admin\AdminController@updateExercises')->name('admin.workout.updateexercises');
+
+    // old api
+    
     Route::get('approve_scholarship/{scholarship_id}', 'Admin\AdminController@approveScholarship')->name('admin.scholarship.approve');
     Route::get('decline_scholarship/{scholarship_id}', 'Admin\AdminController@declineScholarship')->name('admin.scholarship.decline');
     Route::get('active_scholarships', 'Admin\AdminController@activeScholarships')->name('admin.active.scholarship');

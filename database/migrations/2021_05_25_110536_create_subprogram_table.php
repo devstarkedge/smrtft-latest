@@ -17,10 +17,12 @@ class CreateSubprogramTable extends Migration
             $table->bigIncrements('id');
             $table->string('program_id');
             $table->string('subprogram_name')->nullable();
-            $table->string('subprogram_desc')->nullable();
+            $table->text('subprogram_desc')->nullable();
+            $table->string('subprogram_workouts')->nullable();
+            $table->string('week')->nullable();
             $table->string('subprogram_image')->nullable();
             $table->string('nutrition_image')->nullable();
-            $table->string('nutrition_desc')->nullable();
+            $table->text('nutrition_desc')->nullable();
             $table->string('program_time')->nullable();
             $table->timestamps();
         });

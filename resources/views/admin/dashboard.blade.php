@@ -39,7 +39,7 @@
                                     @foreach ($categoryDetails as $details) 
                                     <tr>
                                         <td>{{ $details->category_name }}</td>
-                                        <td><img src="{{ asset('/category/'.$details->category_image)}}" alt="" title="" width="100px;" height="100px;" /></td>
+                                        <td><img src="{{ asset('/category/'.$details->category_image)}}" alt="" title="" width="350px;" height="100px;" /></td>
                                         <td>{{$details->category_desc }}</td>
                                     </tr>
                                     @endforeach        
@@ -52,5 +52,4 @@
             </div>
         </div><!-- Row -->
     </div><!-- Main Wrapper -->
-</div>
 @endsection

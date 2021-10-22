@@ -18,12 +18,12 @@
                     </div>
                     <div class="panel-body">
                         <div class="table-responsive">
-                            <table id="example" class="display table" style="width: 100%; cellspacing: 0;">
+                            <table id="example" class="display table sub-list list-style" style="width: 100%; cellspacing: 0;">
                                 <thead>
                                     <tr>
                                         <th>Name</th>
-                                        <th>Image</th>
-                                        <th>Descriptioh </th>
+                                        <th hidden>Image</th>
+                                        <th>Description </th>
                                         
                                     </tr>
                                 </thead>
@@ -31,7 +31,7 @@
                                     <tr>
                                     <th>Name</th>
                                         <th>Image</th>
-                                        <th>Descriptioh </th>
+                                        <th>Description </th>
                                     </tr>
                                 </tfoot>
                                 <tbody>
@@ -39,7 +39,7 @@
                                     @foreach ($subcategoryDetails as $details) 
                                     <tr>
                                         <td>{{ $details->subcategory_name }}</td>
-                                        <td><img src="{{ asset('/subcategory/'.$details->subcategory_image)}}" alt="" title="" width="100px;" height="100px;" /></td>
+                                        <td hidden><img src="{{ asset('/subcategory/'.$details->subcategory_image)}}" alt="" title="" width="100px;" height="100px;" /></td>
                                         <td>{{$details->subcategory_desc }}</td>
                                     </tr>
                                     @endforeach        
@@ -52,5 +52,8 @@
             </div>
         </div><!-- Row -->
     </div><!-- Main Wrapper -->
-</div>
+    <!--- footer new---->
+    <div class="page-footer">
+    <p class="no-s">2020 © www.starkedge.com</p>
+	</div>
 @endsection

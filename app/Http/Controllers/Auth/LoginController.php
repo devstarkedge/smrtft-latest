@@ -74,5 +74,9 @@ use AuthenticatesUsers;
         }
         return redirect()->back()->withInput()->withErrors(['invalid credentials.']);
     }
-
+          public function logout()
+          {
+              Auth::logout();
+              return redirect()->to('/login');
+          }
 }

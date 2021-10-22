@@ -10,7 +10,7 @@
                     <i class="fa fa-bars"></i>
                 </a>
             </div>
-            <div class="logo-box">
+            <div class="logo-box1">
                 <a href="#" class="logo-text"><span><img src="{{ asset('/images/logo.png') }}" style="width: 100%;"></span></a>
             </div><!-- Logo Box -->
             <div class="search-button">
@@ -51,17 +51,31 @@
     <div class="page-sidebar sidebar">
         <div class="page-sidebar-inner slimscroll">      
             <ul class="menu accordion-menu">
-                <li class="{{ request()->is('/admin/dashboard') ? 'active' : '' }}"><a href="{{route('admin.dashboard')}}" class="waves-effect waves-button"><span class="menu-icon glyphicon glyphicon-home"></span>
+                <li class="@if(Request::path() == 'admin/dashboard')active @endif"><a href="{{route('admin.dashboard')}}" class="waves-effect waves-button"><span class="menu-icon glyphicon glyphicon-home"></span>
                         <p>Home</p>
                     </a></li>
-                <li class="{{ request()->is('/admin/subcategorylist') ? 'active' : '' }}"><a href="{{route('admin.subcategory.list')}}" class="waves-effect waves-button"><span class="menu-icon fa fa-picture-o"></span>
+                <li class="@if(Request::path() == 'admin/subcategorylist')active @endif"><a href="{{route('admin.subcategory.list')}}" class="waves-effect waves-button {{ request()->is('/admin/subcategorylist') ? 'active' : '' }}"><span class="menu-icon fa fa-picture-o"></span>
                         <p>Sub Category List</p>
                     </a></li>
-                <li class="{{ request()->is('/admin/faqs') ? 'active' : '' }}"><a href="{{route('faqs.index')}}" class="waves-effect waves-button"><span class="menu-icon fa fa-question-circle"></span>
-                        <p>WorkOut Type</p>
+                
+                <li class="@if(Request::path() == 'admin/trainerlist')active @endif"><a href="{{route('admin.trainer.list')}}" class="waves-effect waves-button"><span class="menu-icon fa fa-user"></span>
+                        <p>Trainer List</p>
                     </a></li>
-               
-
+                    <li class="@if(Request::path() == 'admin/userlist')active @endif"><a href="{{route('admin.user.list')}}" class="waves-effect waves-button"><span class="menu-icon fa fa-user"></span>
+                        <p>User List</p>
+                    </a></li>
+                    <li class="@if(Request::path() == 'admin/signup-user-list')active @endif"><a href="{{route('admin.signup.user.list')}}" class="waves-effect waves-button"><span class="menu-icon fa fa-user"></span>
+                        <p>Pending Approval List</p>
+                    </a></li>
+                    <li class="@if(Request::path() == 'admin/trainerworkoutlist')active @endif"><a href="{{route('admin.trainerworkout.list')}}" class="waves-effect waves-button"><span class="menu-icon fa fa-question-circle"></span>
+                        <p>WorkOuts</p>
+                    </a></li>
+                     <li class="@if(Request::path() == 'admin/trainerprogramlist')active @endif"><a href="{{route('admin.trainerprogram.list')}}" class="waves-effect waves-button"><span class="menu-icon fa fa-question-circle"></span>
+                        <p>Programs</p>
+                    </a></li>
+                    <li class="@if(Request::path() == 'admin/nutritionlist')active @endif"><a href="{{route('admin.nutrition.list')}}" class="waves-effect waves-button"><span class="menu-icon fa fa-question-circle"></span>
+                        <p>Nutrition List</p>
+                    </a></li>
             </ul>
         </div>
         <!-- Page Sidebar Inner --> 

@@ -1,6 +1,7 @@
 <!-- Main Wrapper -->
 <div class="page-footer">
-    <p class="no-s">2020 &copy; www.starkedge.com</p>
+    <!-- <p class="no-s">2020 &copy; www.starkedge.com</p> -->
+</div>
 </div>
 </div>
 <!-- Page Inner --> 
@@ -32,8 +33,7 @@
 <div class="cd-overlay"></div>
 
 <!-- Javascripts-->
-<script src="{{ asset('assets/plugins/jquery/jquery-2.1.4.min.js') }}"></script>
-<script src="{{ asset('assets/plugins/jquery-ui/jquery-ui.min.js') }}"></script>
+
 <script src="{{ asset('assets/plugins/pace-master/pace.min.js') }}"></script>
 <script src="{{ asset('assets/plugins/jquery-blockui/jquery.blockui.js') }}"></script>
 <script src="{{ asset('assets/plugins/bootstrap/js/bootstrap.min.js') }}"></script>

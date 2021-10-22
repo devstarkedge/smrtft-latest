@@ -18,9 +18,12 @@ class CreateWorkoutsTable extends Migration
             $table->string('subcategory_id');
             $table->string('user_id')->nullable();
             $table->string('workout_name')->nullable();
+            $table->integer('position');
             $table->string('workout_image')->nullable();
             $table->string('workout_url')->nullable();
+            $table->string('video_url')->nullable();
             $table->string('workout_time')->nullable();
+            $table->boolean('workout_status')->deafault(1);
             $table->timestamps();
         });
     }

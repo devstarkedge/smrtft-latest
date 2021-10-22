@@ -23,9 +23,9 @@ class UsersTableSeeder extends Seeder {
             ['name' => config('constant.user_roles.user')],
         ]);
         DB::table('category')->insert([
-            ['category_name' => 'Muscle Group','category_desc' => 'growing muscle','category_image'=>'Cat30muscle.jpg'],
-            ['category_name' => 'Program','category_desc' => 'essential programs','category_image'=>'Cat43program.jpg'],
-            ['category_name' => 'Trainer','category_desc' => 'essential programs','category_image'=>'Cat54trainer.jpg'],
+            ['category_name' => 'Muscle Group','category_desc' => 'growing muscle','category_image'=>'muscle_group.png'],
+            ['category_name' => 'Program','category_desc' => 'essential programs','category_image'=>'program.png'],
+            ['category_name' => 'Trainer','category_desc' => 'essential programs','category_image'=>'trainers.png'],
         ]);
         $role_admin = Role::where('name', config('constant.user_roles.admin'))->first();
         $admin = new User();

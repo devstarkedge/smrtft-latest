@@ -75,6 +75,6 @@
 </footer>
 <section class="copyright">
     <div class="container">
-        <p>&#169;2020 Scholarships Africa.<br> Scholarships Africa is powered by<a href="http://athtgroup.com/" target="_blank"> Across The Horizon.</a> </p>
+        <p>&#169;2021 SMRTFT. </p>
     </div>
 </section>

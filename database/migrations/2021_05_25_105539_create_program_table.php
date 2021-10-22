@@ -20,8 +20,10 @@ class CreateProgramTable extends Migration
             $table->string('program_title')->nullable();
             $table->string('program_desc')->nullable();
             $table->string('program_image')->nullable();
+            $table->string('nutrition_id')->nullable();
             $table->string('number_of_weeks')->nullable();
             $table->string('program_time')->nullable();
+            $table->boolean('program_status')->default(1);
             $table->timestamps();
         });
     }
